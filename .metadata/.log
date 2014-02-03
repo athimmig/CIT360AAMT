@@ -1,0 +1,45 @@
+!SESSION 2014-01-28 11:56:58.479 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_27
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/hyphrend/workspace/CIT360AAMT -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2014-01-28 11:57:18.871
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2014-01-28 11:59:58.947 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_27
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/hyphrend/workspace/CIT360AAMT -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2014-01-28 12:00:24.319
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2014-01-28 12:04:10.707 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_27
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/hyphrend/workspace/CIT360AAMT -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2014-01-28 12:04:18.501
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2014-01-28 12:04:21.260 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_27
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2014-01-28 12:04:33.321
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2014-01-28 12:04:36.101 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_27
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2014-01-28 12:04:44.149
+!MESSAGE Invalid preference page path: XML Syntax
