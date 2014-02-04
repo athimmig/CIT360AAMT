@@ -1,4 +1,4 @@
-USE studentdb
+USE hibernatedb
 
 DROP TABLE IF EXISTS word_bank;
 
