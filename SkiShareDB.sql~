@@ -9,7 +9,11 @@ CREATE TABLE IF NOT EXISTS skiResorts
 	, longitude				FLOAT(20,8)			NOT NULL) ENGINE=InnoDB;
 
 -- Load the data from a file, don't forget the \n after the \r on Windows or it won't work.
+<<<<<<< HEAD
 LOAD DATA LOCAL INFILE '/home/hyphrend/workspace/CIT360AAMT/SkiResortsCSV.csv'
+=======
+LOAD DATA LOCAL INFILE '/Users/arnoldmutariswa/Desktop/class/CIT360AAMT/SkiResortsCSV.csv'
+>>>>>>> 1c72d48826f9ca63755b4f50d0bf349ff497ccfc
 INTO TABLE skiResorts
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
@@ -30,3 +34,5 @@ ADD CONSTRAINT fk_resort_id
 FOREIGN KEY (resort_id) REFERENCES skiResorts(resort_id)
 ON UPDATE CASCADE
 ON DELETE CASCADE;
+
+\. zip_codes.sql;
