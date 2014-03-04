@@ -1,5 +1,6 @@
 USE skishareDB
 
+DROP TABLE IF EXISTS resort_reviews;
 DROP TABLE IF EXISTS skiResorts;
 
 CREATE TABLE IF NOT EXISTS skiResorts
@@ -9,22 +10,19 @@ CREATE TABLE IF NOT EXISTS skiResorts
 	, longitude				FLOAT(20,8)			NOT NULL) ENGINE=InnoDB;
 
 -- Load the data from a file, don't forget the \n after the \r on Windows or it won't work.
-<<<<<<< HEAD
-LOAD DATA LOCAL INFILE '/home/hyphrend/workspace/CIT360AAMT/SkiResortsCSV.csv'
-=======
-LOAD DATA LOCAL INFILE '/Users/arnoldmutariswa/Desktop/class/CIT360AAMT/SkiResortsCSV.csv'
->>>>>>> 1c72d48826f9ca63755b4f50d0bf349ff497ccfc
+
+LOAD DATA LOCAL INFILE 'SkiResortsCSV.csv'
+
 INTO TABLE skiResorts
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 ESCAPED BY '\\'
 LINES TERMINATED BY '\n';
 
-DROP TABLE IF EXISTS resort_reviews;
-
 CREATE TABLE IF NOT EXISTS resort_reviews
 	( review_id				INT UNSIGNED		PRIMARY KEY AUTO_INCREMENT
 	, resort_id			INT UNSIGNED				NOT NULL
+	, review_date			TIMESTAMP				NOT NULL
 	, weather 			INT UNSIGNED				NOT NULL
 	, conditions			INT UNSIGNED				NOT NULL
 	, crowd				INT UNSIGNED				NOT NULL) ENGINE=InnoDB;
@@ -35,4 +33,4 @@ FOREIGN KEY (resort_id) REFERENCES skiResorts(resort_id)
 ON UPDATE CASCADE
 ON DELETE CASCADE;
 
-\. zip_codes.sql;
+\. zip_codes.sql
