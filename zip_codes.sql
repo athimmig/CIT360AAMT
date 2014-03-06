@@ -1,3 +1,4 @@
+-- USE skishareDB;
 -- phpMyAdmin SQL Dump
 -- version 3.4.11.1
 -- http://www.phpmyadmin.net

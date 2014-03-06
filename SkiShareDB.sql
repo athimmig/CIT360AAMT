@@ -1,5 +1,6 @@
 USE skishareDB
 
+DROP TABLE IF EXISTS resort_reviews;
 DROP TABLE IF EXISTS skiResorts;
 
 CREATE TABLE IF NOT EXISTS skiResorts
@@ -10,7 +11,7 @@ CREATE TABLE IF NOT EXISTS skiResorts
 
 -- Load the data from a file, don't forget the \n after the \r on Windows or it won't work.
 
-LOAD DATA LOCAL INFILE 'SkiResortsCSV.csv'
+LOAD DATA LOCAL INFILE '/Users/arnoldmutariswa/Desktop/class/CIT360AAMT/SkiResortsCSV.csv'
 
 INTO TABLE skiResorts
 FIELDS TERMINATED BY ','
@@ -18,7 +19,6 @@ ENCLOSED BY '"'
 ESCAPED BY '\\'
 LINES TERMINATED BY '\n';
 
-DROP TABLE IF EXISTS resort_reviews;
 
 CREATE TABLE IF NOT EXISTS resort_reviews
 	( review_id				INT UNSIGNED		PRIMARY KEY AUTO_INCREMENT
@@ -33,4 +33,5 @@ FOREIGN KEY (resort_id) REFERENCES skiResorts(resort_id)
 ON UPDATE CASCADE
 ON DELETE CASCADE;
 
-\. zip_codes.sql;
+
+\. /Users/arnoldmutariswa/Desktop/class/CIT360AAMT/zip_codes.sql
