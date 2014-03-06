@@ -19,10 +19,10 @@ ENCLOSED BY '"'
 ESCAPED BY '\\'
 LINES TERMINATED BY '\n';
 
-
 CREATE TABLE IF NOT EXISTS resort_reviews
 	( review_id				INT UNSIGNED		PRIMARY KEY AUTO_INCREMENT
 	, resort_id			INT UNSIGNED				NOT NULL
+	, review_date			TIMESTAMP				NOT NULL
 	, weather 			INT UNSIGNED				NOT NULL
 	, conditions			INT UNSIGNED				NOT NULL
 	, crowd				INT UNSIGNED				NOT NULL) ENGINE=InnoDB;
@@ -33,5 +33,4 @@ FOREIGN KEY (resort_id) REFERENCES skiResorts(resort_id)
 ON UPDATE CASCADE
 ON DELETE CASCADE;
 
-
-\. /Users/arnoldmutariswa/Desktop/class/CIT360AAMT/zip_codes.sql
+\. zip_codes.sql
