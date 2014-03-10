@@ -1,4 +1,3 @@
-package tester;
 import javax.persistence.*;
 
 @Entity
@@ -22,7 +21,7 @@ public class ZipCodeBean {
     @Column(name = "county")
     private String county;
 
-    private int getId() {
+    public int getId() {
         return id;
     }
     public void setId(int id) {
@@ -36,14 +35,14 @@ public class ZipCodeBean {
         this.zip_code = zip_code;
     }
 
-    public Float getLatitude() {
+    public float getLatitude() {
         return latitude;
     }
     public void setLatitude(Float latitude) {
         this.latitude = latitude;
     }
     
-    private Float getLongitude() {
+    public float getLongitude() {
         return longitude;
     }
     public void setLongitude(Float longitude) {
