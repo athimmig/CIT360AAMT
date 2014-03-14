@@ -1,8 +1,27 @@
+import java.io.Serializable;
+import java.util.HashMap;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "zip_codes")
-public class ZipCodeBean {
+public class ZipCodeBean implements Serializable  {
+	
+	
+public ZipCodeBean() {
+        
+    }
+    
+    public ZipCodeBean(HashMap hash) {
+        id = Integer.parseInt(String.valueOf(hash.get("id")));
+        zip_code = Integer.parseInt(String.valueOf(hash.get("zip_code")));
+        latitude = Float.parseFloat(String.valueOf(hash.get("latitude")));
+        longitude = Float.parseFloat(String.valueOf(hash.get("longitude")));
+        state = (String)hash.get("state");
+        city = (String)hash.get("city");
+        county = (String)hash.get(county);
+    }
+	
 
     @Id
     @GeneratedValue

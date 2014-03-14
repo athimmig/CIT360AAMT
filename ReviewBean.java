@@ -1,12 +1,27 @@
+import java.io.Serializable;
 import java.util.Date;
+import java.util.HashMap;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "resort_reviews")
+public class ReviewBean implements Serializable  {
 
-
-public class ReviewBean {
-
+public ReviewBean() {
+        
+    }
+    
+    public ReviewBean(HashMap hash) {
+    	reviewid = Integer.parseInt(String.valueOf(hash.get("reviewid")));
+    	resortid = Integer.parseInt(String.valueOf(hash.get("resortid")));
+    	weather = Integer.parseInt(String.valueOf(hash.get("weather")));
+    	conditions = Integer.parseInt(String.valueOf(hash.get("conditions")));
+    	crowd = Integer.parseInt(String.valueOf(hash.get("crowd")));
+        reviewdate = (String)hash.get("reviewdate");
+      
+    }
+	
 	  @Id 
 	  @GeneratedValue
 	  private Integer reviewid;
