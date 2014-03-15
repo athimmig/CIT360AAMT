@@ -58,6 +58,7 @@ public class HibernateUtilSingleton
 		 */
 
 		config.addAnnotatedClass(ResortBean.class);
+		config.addAnnotatedClass(ReviewBean.class);
 		config.addAnnotatedClass(ZipCodeBean.class);
 
 

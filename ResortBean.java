@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.*;
@@ -6,21 +9,21 @@ import javax.persistence.*;
 @Entity
 @Table(name = "skiResorts")
 public class ResortBean {
-	
+
 	@Id
 	@GeneratedValue
-	@Column(name = "resort_id")
-	  private Integer id;
+	private Integer id;
 	@Column(name = "resort_name")
-	  private String name;
-	@Column(name = "lattitude")
-	  private float latitude;
+	private String name;
+	private float latitude;
 	@Column(name = "longitude")
-	  private float longitude;
-//	@Column(name = "longitude")
-//	  private Set<ReviewBean> reviews;
+	private float longitude;
 
-	  public String getName() {
+	 @OneToMany(mappedBy="resort", fetch=FetchType.EAGER)
+	 @Column(name="resort_id")
+	private Set<ReviewBean> reviews = new HashSet<ReviewBean>();
+
+	public String getName() {
 		return name;
 	}
 
@@ -48,12 +51,12 @@ public class ResortBean {
 		return id;
 	}
 
-//	public Set<ReviewBean> getReviews() {
-//		return reviews;
-//	}
+	public Set<ReviewBean> getReviews() {
+		return reviews;
+	}
 
 	public void newOperation() {
-	  }
+	}
 
 	@Override
 	public String toString() {
@@ -61,4 +64,4 @@ public class ResortBean {
 				+ latitude + ", longitude=" + longitude + "]";
 	}
 
-	}
+}

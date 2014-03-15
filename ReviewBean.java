@@ -3,41 +3,37 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "resort_reviews")
-
-
 public class ReviewBean {
 
 	  @Id 
 	  @GeneratedValue
-	  private Integer reviewid;
-	  
-	  @Column(name = "resort_id")
-	  private Integer resortid;
+	  private Integer id;
 	 
 	  @Column(name = "review_date")
 	  private String reviewdate;
 	  
-	  @Column(name = "weather")
 	  private Integer weather;
 	  
-	  @Column(name = "conditions")
 	  private Integer conditions;
 	  
-	  @Column(name = "crowd")
 	  private Integer crowd;
 	  
+	  @ManyToOne
+	  @JoinColumn(name="resort_id", referencedColumnName="id")
+	  private ResortBean resort;
 	  
-	public Integer getReviewid() {
-		return reviewid;
+	  
+	public ResortBean getResort() {
+		return resort;
 	}
-	public void setReviewid(Integer reviewid) {
-		this.reviewid = reviewid;		
+	public void setResort(ResortBean resort) {
+		this.resort = resort;
 	}
-	public Integer getResortid() {
-		return resortid;
+	public Integer getId() {
+		return id;
 	}
-	public void setResortid(Integer resortid) {
-		this.resortid = resortid;		
+	public void setId(Integer reviewid) {
+		this.id = reviewid;		
 	}
 	public Date getReviewdate() {
 		return new Date(Long.parseLong(reviewdate));
@@ -62,6 +58,12 @@ public class ReviewBean {
 	}
 	public void setCrowd(Integer crowd) {
 		this.crowd = crowd;
+	}
+	@Override
+	public String toString() {
+		return "ReviewBean [id=" + id + ", reviewdate=" + reviewdate
+				+ ", weather=" + weather + ", conditions=" + conditions
+				+ ", crowd=" + crowd + ", resort=" + resort + "]";
 	}
 	
 }
