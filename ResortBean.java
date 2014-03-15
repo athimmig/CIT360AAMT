@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
+import java.io.Serializable;
+import java.util.HashMap;
 import java.util.Set;
 
 import javax.persistence.*;
@@ -8,8 +10,19 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "skiResorts")
-public class ResortBean {
-
+public class ResortBean implements Serializable {
+	
+public ResortBean() {
+        
+    }
+    
+    public ResortBean(HashMap hash) {
+        id = Integer.parseInt(String.valueOf(hash.get("id")));
+        name = (String)hash.get("name");
+        latitude = Float.parseFloat(String.valueOf(hash.get("latitude")));
+        longitude = Float.parseFloat(String.valueOf(hash.get("longitude")));
+    }
+	
 	@Id
 	@GeneratedValue
 	private Integer id;
