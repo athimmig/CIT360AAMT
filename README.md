@@ -1,8 +1,5 @@
-This is the server code for the SkiShare application
+This is the code for the SkiShare Android GUI
 
-In order to get it running
-
-1. Create a database in MySQL called skisharedb;
-2. Run SkiShareDB.sql in the sql folder
-3. Copy all of the code in the code folder to your application workspace
-4. Ensure that all of configuration in the HibernateUtilSingleton is correct
+In order to get it working
+1. You must have an AVD with Android version 19.
+2. Copy the code into your workspace
