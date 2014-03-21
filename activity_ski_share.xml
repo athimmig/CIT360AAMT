@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context=".FullscreenActivity" >
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Search" />
+
+    <EditText
+        android:id="@+id/searchInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_toLeftOf="@+id/searchButton"
+        android:ems="10" />
+    <SeekBar
+        android:id="@+id/rangeBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/searchButton"
+        android:max="200" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:fillViewport="false" >
+
+        <LinearLayout
+            android:id="@+id/resultsLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="202dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/seekBar1"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
